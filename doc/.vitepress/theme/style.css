@@ -157,3 +157,38 @@
 img {
   border-radius: 8px;
 }
+
+span.highlighted-word {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20%;
+    bottom: -5%;
+    right: -20%;
+    border: 1px solid #00000030;
+    border-radius: 4px;
+    z-index: -1;
+    background: #00000005;
+  }
+}
+
+blockquote.custom-blockquote {
+  position: relative;
+  border-left: none;
+  padding-left: 24px;
+  font-style: italic;
+
+  &::before {
+    content: '“';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 48px;
+    font-family: "Arial", sans-serif !important;
+    font-weight: 100 !important;
+    opacity: 50%;
+  }
+}
