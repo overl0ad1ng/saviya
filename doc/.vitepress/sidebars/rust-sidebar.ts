@@ -38,9 +38,8 @@ export const rustSidebar = [
 					{
 						text: "枚举与模式匹配",
 						items: [
-							{ text: '定义枚举', link: '/docs/backend/rust/primary/struct-and-enums/enums/' },
+							{ text: '枚举', link: '/docs/backend/rust/primary/struct-and-enums/enums/' },
 							{ text: '模式匹配', link: '/docs/backend/rust/primary/struct-and-enums/enums/match' },
-							{ text: 'if let & while let', link: '/docs/backend/rust/primary/struct-and-enums/enums/if-let' },
 							{ text: 'Option 和 Result', link: '/docs/backend/rust/primary/struct-and-enums/enums/option-and-result' },
 						]
 					},
@@ -60,14 +59,6 @@ export const rustSidebar = [
 					{ text: '模块系统', link: '/docs/backend/rust/senior/project/mod-and-access-modifier' },
 					{ text: '外部依赖管理', link: '/docs/backend/rust/senior/project/cargo-toml' },
 					{ text: 'Rust 代码风格', link: '/docs/backend/rust/senior/project/lints' },
-				]
-			},
-			{
-				text: '函数式编程',
-				collapsed: true,
-				items: [
-					{ text: '闭包', link: '/docs/backend/rust/senior/functional-programming/closure' },
-					{ text: '迭代器', link: '/docs/backend/rust/senior/functional-programming/iterator' },
 				]
 			},
 			{
@@ -111,6 +102,14 @@ export const rustSidebar = [
 					{ text: '常用标准 Trait', link: '/docs/backend/rust/senior/generics-trait-and-lifecycle/common-traits' },
 					{ text: 'Trait Bound (特征约束)', link: '/docs/backend/rust/senior/generics-trait-and-lifecycle/trait-bound' },
 					{ text: '深入理解生命周期标识', link: '/docs/backend/rust/senior/generics-trait-and-lifecycle/lifecycle' },
+				]
+			},
+			{
+				text: '函数式编程',
+				collapsed: true,
+				items: [
+					{ text: '闭包', link: '/docs/backend/rust/senior/functional-programming/closure' },
+					{ text: '迭代器', link: '/docs/backend/rust/senior/functional-programming/iterator' },
 				]
 			},
 			{

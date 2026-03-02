@@ -40,6 +40,7 @@ const date = computed(() => {
 
 .doc-detail {
   color: var(--vp-c-text-2);
+  margin-bottom: 6px;
 }
 
 .doc-title {

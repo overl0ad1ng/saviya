@@ -9,7 +9,7 @@ import mark from 'markdown-it-mark'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Saviya Me",
+  title: "Saviya",
   description: "A VitePress Site",
   lastUpdated: true,
   
