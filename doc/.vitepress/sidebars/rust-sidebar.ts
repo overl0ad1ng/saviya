@@ -1,4 +1,6 @@
-export const rustSidebar = [
+import type { Sidebars } from "./index";
+
+export const rustSidebar: Sidebars = [
 	{
 		text: '初级',
 		collapsable: true,

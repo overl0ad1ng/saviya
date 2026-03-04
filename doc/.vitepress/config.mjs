@@ -6,6 +6,8 @@ import mathjax3 from 'markdown-it-mathjax3';
 import { transformerMetaWordHighlight, transformerRenderIndentGuides } from "@shikijs/transformers";
 import footnote from 'markdown-it-footnote';
 import mark from 'markdown-it-mark'
+import {todaySidebar} from "./sidebars/today-sidebar";
+import { base as kotlinBase, kotlinSidebar} from "./sidebars/kotlin-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -67,7 +69,9 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/docs/backend/rust/': rustSidebar
+      '/docs/backend/rust/': rustSidebar,
+      '/docs/project/today/': todaySidebar,
+      [kotlinBase]: kotlinSidebar,
     }
   }
 })
