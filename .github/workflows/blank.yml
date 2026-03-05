@@ -1,0 +1,47 @@
+name: Deploy VitePress site to Pages
+
+on:
+  push:
+    branches: [main] # 如果你的默认分支叫 master，请修改为 master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm' # 如果你用 pnpm 或 yarn，请对应修改
+
+      - name: Install dependencies
+        run: pnpm install # 如果是 pnpm，请改为 pnpm install
+
+      - name: Build with VitePress
+        run: pnpm run docs:build # 确保你的 package.json 里有这个命令
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .vitepress/dist # VitePress 默认编译后的输出目录
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
