@@ -2,7 +2,7 @@ name: Deploy VitePress site to Pages
 
 on:
   push:
-    branches: [main] # 如果你的默认分支叫 master，请修改为 master
+    branches: [master] # 如果你的默认分支叫 master，请修改为 master
 
 permissions:
   contents: read
